@@ -1,0 +1,122 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{kaggle}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction and problem statement}{2}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Dataset description}{2}{section.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Variables of the dataset. Units were verified from the observed ranges (e.g.\ a mean wind speed of about 7 corresponds to 1.9\,m/s if read as km/h, which is typical for Delhi; read as m/s it would be implausibly windy every day).}}{2}{table.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:vars}{{1}{2}{Variables of the dataset. Units were verified from the observed ranges (e.g.\ a mean wind speed of about 7 corresponds to 1.9\,m/s if read as km/h, which is typical for Delhi; read as m/s it would be implausibly windy every day)}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Data-quality issues.}{2}{section*.3}\protected@file@percent }
+\citation{hyndman}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Descriptive statistics of the cleaned daily data ($n = 1575$ days).}}{3}{table.caption.4}\protected@file@percent }
+\newlabel{tab:descriptive_stats}{{2}{3}{Descriptive statistics of the cleaned daily data ($n = 1575$ days)}{table.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Histograms of the cleaned daily data with mean (dashed) and median (solid).}}{3}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:hist}{{1}{3}{Histograms of the cleaned daily data with mean (dashed) and median (solid)}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{3}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{3}{Methodology}{section.3}{}}
+\citation{spearman}
+\citation{fisher}
+\citation{bartlett}
+\citation{bretherton}
+\citation{montgomery}
+\citation{durbin}
+\citation{cook}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Descriptive statistics and correlation}{4}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Simple linear regression}{4}{subsection.3.2}\protected@file@percent }
+\citation{bates}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Simple non-linear regression}{5}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:method-nl}{{3.3}{5}{Simple non-linear regression}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Model evaluation and selection}{5}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:selection}{{3.4}{5}{Model evaluation and selection}{subsection.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Seasonality}{6}{subsection.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Data pre-processing (2a)}{6}{section.4}\protected@file@percent }
+\newlabel{sec:prep}{{4}{6}{Data pre-processing (2a)}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Relation analysis between parameters (2b)}{6}{section.5}\protected@file@percent }
+\newlabel{sec:corr}{{5}{6}{Relation analysis between parameters (2b)}{section.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Pre-processing steps: rows before/after, values corrected per variable and outliers handled.}}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:preprocessing_summary}{{3}{7}{Pre-processing steps: rows before/after, values corrected per variable and outliers handled}{table.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Descriptive statistics of each variable before and after pre-processing.}}{7}{table.caption.7}\protected@file@percent }
+\newlabel{tab:preprocessing_descriptives}{{4}{7}{Descriptive statistics of each variable before and after pre-processing}{table.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Distributions before (top) and after (bottom) pre-processing. The raw pressure range is dominated by the invalid values; the wind speed outliers are capped.}}{7}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:box}{{2}{7}{Distributions before (top) and after (bottom) pre-processing. The raw pressure range is dominated by the invalid values; the wind speed outliers are capped}{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Cleaned daily series. Orange points mark the interpolated pressures (bottom panel) and the capped wind speeds (third panel). All four series show a clear annual cycle.}}{8}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:ts}{{3}{8}{Cleaned daily series. Orange points mark the interpolated pressures (bottom panel) and the capped wind speeds (third panel). All four series show a clear annual cycle}{figure.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces All six pairs ranked by $|r|$: Pearson $r$ with $t$-test ($t = r\sqrt  {(n-2)/(1-r^2)}$, $df = n-2$) and 95\% Fisher-$z$ interval, Spearman $\rho $, and the $p$-value recomputed with the autocorrelation-adjusted effective sample size $n_{\mathrm  {eff}}$.}}{8}{table.caption.10}\protected@file@percent }
+\newlabel{tab:correlation_pairs_ranked}{{5}{8}{All six pairs ranked by $|r|$: Pearson $r$ with $t$-test ($t = r\sqrt {(n-2)/(1-r^2)}$, $df = n-2$) and 95\% Fisher-$z$ interval, Spearman $\rho $, and the $p$-value recomputed with the autocorrelation-adjusted effective sample size $n_{\mathrm {eff}}$}{table.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Pearson (left) and Spearman (right) correlation matrices.}}{9}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:heat}{{4}{9}{Pearson (left) and Spearman (right) correlation matrices}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {paragraph}{Key findings.}{9}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Seasonal structure.}{9}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Simple linear regression (2c-i)}{9}{section.6}\protected@file@percent }
+\newlabel{sec:lin}{{6}{9}{Simple linear regression (2c-i)}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Direction of each model.}{9}{section*.17}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Scatterplot matrix: scatter plots (lower), histograms (diagonal), Pearson $r$ and Spearman $\rho $ (upper).}}{10}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:pairs}{{5}{10}{Scatterplot matrix: scatter plots (lower), histograms (diagonal), Pearson $r$ and Spearman $\rho $ (upper)}{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Monthly mean and $\pm 1$ standard deviation of each parameter (2013--2017).}}{11}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:monthly}{{6}{11}{Monthly mean and $\pm 1$ standard deviation of each parameter (2013--2017)}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Distribution per year; 2017 covers January--April only, hence its lower temperatures and higher pressures.}}{11}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:year}{{7}{11}{Distribution per year; 2017 covers January--April only, hence its lower temperatures and higher pressures}{figure.caption.16}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Simple linear regression $y = a + b\,x$ for every pair, in the primary direction and reversed (rev.). $R^2$, adjusted $R^2$, RMSE and the Durbin--Watson statistic (DW) refer to the full data (2013--2017); $R^2$ train/test: fitted on 2013--2016, evaluated on 2017 (Jan--Apr).}}{12}{table.caption.18}\protected@file@percent }
+\newlabel{tab:linear_results}{{6}{12}{Simple linear regression $y = a + b\,x$ for every pair, in the primary direction and reversed (rev.). $R^2$, adjusted $R^2$, RMSE and the Durbin--Watson statistic (DW) refer to the full data (2013--2017); $R^2$ train/test: fitted on 2013--2016, evaluated on 2017 (Jan--Apr)}{table.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Linear fits on all data (solid) and on 2013--2016 only (dashed); blue: 2013--2016, orange: 2017 test days.}}{12}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:linfit}{{8}{12}{Linear fits on all data (solid) and on 2013--2016 only (dashed); blue: 2013--2016, orange: 2017 test days}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results.}{12}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Residual diagnostics.}{13}{section*.21}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Residuals vs fitted values of the linear models; orange: mean residual in 20 equal-size groups.}}{13}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:linres}{{9}{13}{Residuals vs fitted values of the linear models; orange: mean residual in 20 equal-size groups}{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Simple non-linear regression (2c-ii)}{13}{section.7}\protected@file@percent }
+\newlabel{sec:nl}{{7}{13}{Simple non-linear regression (2c-ii)}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results per relation.}{13}{section*.27}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Normal Q--Q plots of the linear residuals.}}{14}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:qq}{{10}{14}{Normal Q--Q plots of the linear residuals}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces All fitted curves per pair; the selected curve is drawn thick.}}{14}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:nlfit}{{11}{14}{All fitted curves per pair; the selected curve is drawn thick}{figure.caption.25}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Linear and non-linear simple regression for the six pairs (primary direction; the reverse direction is in the CSV). $R^2$ is computed on the original $y$ scale for every curve. Score = (adjusted $R^2$ + test $R^2$)/2; * marks the selected curve. $k$ = number of parameters.}}{15}{table.caption.24}\protected@file@percent }
+\newlabel{tab:nonlinear_results}{{7}{15}{Linear and non-linear simple regression for the six pairs (primary direction; the reverse direction is in the CSV). $R^2$ is computed on the original $y$ scale for every curve. Score = (adjusted $R^2$ + test $R^2$)/2; * marks the selected curve. $k$ = number of parameters}{table.caption.24}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Selected curve per relation (both directions) compared with the linear fit: full-data $R^2$, gain in $R^2$, and $R^2$ on the 2017 test period.}}{15}{table.caption.26}\protected@file@percent }
+\newlabel{tab:nonlinear_best}{{8}{15}{Selected curve per relation (both directions) compared with the linear fit: full-data $R^2$, gain in $R^2$, and $R^2$ on the 2017 test period}{table.caption.26}{}}
+\@writefile{toc}{\contentsline {paragraph}{Overfitting.}{16}{section*.28}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Residuals of the selected curve for each pair, with binned means.}}{16}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:nlres}{{12}{16}{Residuals of the selected curve for each pair, with binned means}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}$R^2$ comparison and discussion (2d)}{17}{section.8}\protected@file@percent }
+\newlabel{sec:r2}{{8}{17}{\texorpdfstring {$R^2$}{R2} comparison and discussion (2d)}{section.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces $R^2$ (original scale, full data) of every curve for every relation. Selected = curve with the highest score (adjusted $R^2$ + test $R^2$)/2; $\Delta R^2$ = best non-linear curve minus linear; -- = not defined ($\ln x$ with $x \le 0$).}}{17}{table.caption.30}\protected@file@percent }
+\newlabel{tab:r2_comparison}{{9}{17}{$R^2$ (original scale, full data) of every curve for every relation. Selected = curve with the highest score (adjusted $R^2$ + test $R^2$)/2; $\Delta R^2$ = best non-linear curve minus linear; -- = not defined ($\ln x$ with $x \le 0$)}{table.caption.30}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Linear $R^2$ ($=r^2$, symmetric) and $R^2$ of the selected curve (row = response).}}{17}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:r2heat}{{13}{17}{Linear $\Rsq $ ($=r^2$, symmetric) and $\Rsq $ of the selected curve (row = response)}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {paragraph}{Are the high $R^2$ values driven by a few outliers?}{17}{section*.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Seasonality.}{17}{section*.36}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Gain in $R^2$ of the best non-linear curve over the straight line; dashed: threshold for a meaningful gain (0.05).}}{18}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:gain}{{14}{18}{Gain in $\Rsq $ of the best non-linear curve over the straight line; dashed: threshold for a meaningful gain (0.05)}{figure.caption.32}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Relations ranked by $R^2$ of the selected curve (primary direction), with the $R^2$ that remains after removing the annual cycle (anomaly $R^2$).}}{18}{table.caption.33}\protected@file@percent }
+\newlabel{tab:relations_ranked}{{10}{18}{Relations ranked by $R^2$ of the selected curve (primary direction), with the $R^2$ that remains after removing the annual cycle (anomaly $R^2$)}{table.caption.33}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Robustness of the linear fits: number of influential days (Cook's $D > 4/n$), $R^2$ after removing them, and $R^2$ with the uncapped wind speed.}}{18}{table.caption.35}\protected@file@percent }
+\newlabel{tab:robustness_check}{{11}{18}{Robustness of the linear fits: number of influential days (Cook's $D > 4/n$), $R^2$ after removing them, and $R^2$ with the uncapped wind speed}{table.caption.35}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Seasonality check: correlation of the raw daily values and of the anomalies from the monthly mean (annual cycle removed), the share of $R^2$ lost by removing the annual cycle, and the correlation within each season.}}{19}{table.caption.37}\protected@file@percent }
+\newlabel{tab:seasonality_check}{{12}{19}{Seasonality check: correlation of the raw daily values and of the anomalies from the monthly mean (annual cycle removed), the share of $R^2$ lost by removing the annual cycle, and the correlation within each season}{table.caption.37}{}}
+\@writefile{toc}{\contentsline {paragraph}{What the regressions do not show.}{19}{section*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{19}{section.9}\protected@file@percent }
+\newlabel{sec:conclusion}{{9}{19}{Conclusion}{section.9}{}}
+\bibcite{kaggle}{1}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Individual contributions}{20}{section.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Individual contributions (each member about 25\% of the work).}}{20}{table.caption.39}\protected@file@percent }
+\newlabel{tab:contrib}{{13}{20}{Individual contributions (each member about 25\% of the work)}{table.caption.39}{}}
+\bibcite{montgomery}{2}
+\bibcite{bates}{3}
+\bibcite{spearman}{4}
+\bibcite{fisher}{5}
+\bibcite{durbin}{6}
+\bibcite{cook}{7}
+\bibcite{hyndman}{8}
+\bibcite{bartlett}{9}
+\bibcite{bretherton}{10}
+\bibcite{tukey}{11}
+\bibcite{rcore}{12}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Code excerpts}{22}{appendix.A}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{../R/Project\textunderscore code.R}{22}{lstlisting.-1}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{../R/Project\textunderscore code.R}{22}{lstlisting.-2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{../R/Project\textunderscore code.R}{23}{lstlisting.-3}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{../R/Project\textunderscore code.R}{24}{lstlisting.-4}\protected@file@percent }
+\gdef \@abspage@last{26}

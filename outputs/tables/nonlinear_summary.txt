@@ -1,0 +1,21 @@
+Non-linear regression summary (R^2 on the original scale; selection by
+score = (adjusted R^2 + test R^2) / 2)
+Primary direction:
+  meantemp ~ humidity        best cubic       R^2 0.329 -> 0.331 (gain +0.002), test R^2  0.122 ->  0.132: essentially linear (gain < 0.01)
+  meantemp ~ wind_speed      best exponential R^2 0.098 -> 0.094 (gain -0.004), test R^2 -0.502 -> -0.479: no in-sample gain; chosen only for a slightly better 2017 test R^2 -> essentially linear
+  meantemp ~ meanpressure    best cubic       R^2 0.776 -> 0.819 (gain +0.043), test R^2  0.755 ->  0.715: mild curvature (gain 0.01-0.05)
+  humidity ~ wind_speed      best exponential R^2 0.160 -> 0.165 (gain +0.005), test R^2  0.099 ->  0.097: essentially linear (gain < 0.01)
+  humidity ~ meanpressure    best quadratic   R^2 0.115 -> 0.187 (gain +0.072), test R^2  0.133 ->  0.292: clearly non-linear (gain >= 0.05)
+  wind_speed ~ meanpressure  best cubic       R^2 0.090 -> 0.091 (gain +0.001), test R^2 -0.356 -> -0.351: essentially linear (gain < 0.01)
+Reverse direction:
+  humidity ~ meantemp        best linear      R^2 0.329 -> 0.329 (gain +0.000), test R^2  0.310 ->  0.310: linear fit is best
+  wind_speed ~ meantemp      best logarithmic R^2 0.098 -> 0.089 (gain -0.010), test R^2 -0.340 -> -0.296: no in-sample gain; chosen only for a slightly better 2017 test R^2 -> essentially linear
+  meanpressure ~ meantemp    best quadratic   R^2 0.776 -> 0.788 (gain +0.012), test R^2  0.730 ->  0.752: mild curvature (gain 0.01-0.05)
+  wind_speed ~ humidity      best power       R^2 0.160 -> 0.151 (gain -0.009), test R^2 -0.004 ->  0.044: no in-sample gain; chosen only for a slightly better 2017 test R^2 -> essentially linear
+  meanpressure ~ humidity    best cubic       R^2 0.115 -> 0.125 (gain +0.010), test R^2 -0.213 -> -0.211: mild curvature (gain 0.01-0.05)
+  meanpressure ~ wind_speed  best linear      R^2 0.090 -> 0.090 (gain +0.000), test R^2 -0.772 -> -0.772: linear fit is best
+Overfitting check: the cubic has a higher adjusted R^2 than the quadratic but a lower
+  test R^2 for 4 of 12 relations (humidity ~ meantemp, meanpressure ~ meantemp, humidity ~ wind_speed, wind_speed ~ humidity).
+Skipped models: 6 (logarithmic with predictor wind_speed: ln(x) undefined, 25 predictor values <= 0; power with predictor wind_speed: ln(x) undefined, 25 predictor values <= 0).
+Gauss-Newton fits (exponential, power): 21 of 21 converged on the full data (2-6 iterations).
+  Start values from y > 0 only (y has zeros) for: wind_speed ~ meantemp, wind_speed ~ humidity, wind_speed ~ meanpressure.

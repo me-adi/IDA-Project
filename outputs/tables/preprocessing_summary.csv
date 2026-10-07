@@ -1,0 +1,13 @@
+"Step","Check","Variable","Count"
+"Read","Rows in train file","all",1462
+"Read","Rows in test file","all",114
+"Combine","Rows after combining","all",1576
+"Overlap","Overlapping dates removed (train row dropped)","all",1
+"Date index","Missing dates inserted","all",0
+"Date index","Duplicate dates","all",0
+"Range check","Humidity outside 0-100","humidity",0
+"Range check","Negative wind speed","wind_speed",0
+"Pressure","Outside 990-1030 hPa, interpolated","meanpressure",10
+"Wind","Above Q3 + 1.5 IQR, capped","wind_speed",33
+"Wind","Diagnostic: |z| > 3","wind_speed",14
+"Final","Rows after pre-processing","all",1575

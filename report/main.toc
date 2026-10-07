@@ -1,0 +1,27 @@
+\contentsline {section}{\numberline {1}Introduction and problem statement}{2}{section.1}%
+\contentsline {section}{\numberline {2}Dataset description}{2}{section.2}%
+\contentsline {paragraph}{Data-quality issues.}{2}{section*.3}%
+\contentsline {section}{\numberline {3}Methodology}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Descriptive statistics and correlation}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Simple linear regression}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Simple non-linear regression}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Model evaluation and selection}{5}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Seasonality}{6}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Data pre-processing (2a)}{6}{section.4}%
+\contentsline {section}{\numberline {5}Relation analysis between parameters (2b)}{6}{section.5}%
+\contentsline {paragraph}{Key findings.}{9}{section*.12}%
+\contentsline {paragraph}{Seasonal structure.}{9}{section*.14}%
+\contentsline {section}{\numberline {6}Simple linear regression (2c-i)}{9}{section.6}%
+\contentsline {paragraph}{Direction of each model.}{9}{section*.17}%
+\contentsline {paragraph}{Results.}{12}{section*.20}%
+\contentsline {paragraph}{Residual diagnostics.}{13}{section*.21}%
+\contentsline {section}{\numberline {7}Simple non-linear regression (2c-ii)}{13}{section.7}%
+\contentsline {paragraph}{Results per relation.}{13}{section*.27}%
+\contentsline {paragraph}{Overfitting.}{16}{section*.28}%
+\contentsline {section}{\numberline {8}$R^2$ comparison and discussion (2d)}{17}{section.8}%
+\contentsline {paragraph}{Are the high $R^2$ values driven by a few outliers?}{17}{section*.34}%
+\contentsline {paragraph}{Seasonality.}{17}{section*.36}%
+\contentsline {paragraph}{What the regressions do not show.}{19}{section*.38}%
+\contentsline {section}{\numberline {9}Conclusion}{19}{section.9}%
+\contentsline {section}{\numberline {10}Individual contributions}{20}{section.10}%
+\contentsline {section}{\numberline {A}Code excerpts}{22}{appendix.A}%

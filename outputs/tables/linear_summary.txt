@@ -1,0 +1,30 @@
+Train period: 2013-01-01 to 2016-12-31 (1461 days); test period: 2017-01-01 to 2017-04-24 (114 days).
+Linear regression summary (primary directions, ranked by full-data R^2)
+  meantemp ~ meanpressure    R^2 = 0.776: meanpressure explains 77.6% of the variance of meantemp; slope -0.8729 per unit (95% CI -0.8961 to -0.8497), p < 0.001.
+  meantemp ~ humidity        R^2 = 0.329: humidity explains 32.9% of the variance of meantemp; slope -0.2482 per unit (95% CI -0.2657 to -0.2307), p < 0.001.
+  humidity ~ wind_speed      R^2 = 0.160: wind_speed explains 16.0% of the variance of humidity; slope -1.638 per unit (95% CI -1.823 to -1.452), p < 0.001.
+  humidity ~ meanpressure    R^2 = 0.115: meanpressure explains 11.5% of the variance of humidity; slope 0.7767 per unit (95% CI 0.6701 to 0.8832), p < 0.001.
+  meantemp ~ wind_speed      R^2 = 0.098: wind_speed explains  9.8% of the variance of meantemp; slope 0.5548 per unit (95% CI 0.4716 to 0.638), p < 0.001.
+  wind_speed ~ meanpressure  R^2 = 0.090: meanpressure explains  9.0% of the variance of wind_speed; slope -0.1674 per unit (95% CI -0.1938 to -0.141), p < 0.001.
+Reverse direction: R^2 is identical (= r^2) but the slope is not the reciprocal;
+  meantemp ~ humidity        b =   -0.2482 | reverse b =   -1.3254 | product 0.3290 = r^2 = 0.3290
+  meantemp ~ wind_speed      b =    0.5548 | reverse b =    0.1768 | product 0.0981 = r^2 = 0.0981
+  meantemp ~ meanpressure    b =   -0.8729 | reverse b =   -0.8889 | product 0.7760 = r^2 = 0.7760
+  humidity ~ wind_speed      b =   -1.6379 | reverse b =   -0.0977 | product 0.1601 = r^2 = 0.1601
+  humidity ~ meanpressure    b =    0.7767 | reverse b =    0.1481 | product 0.1150 = r^2 = 0.1150
+  wind_speed ~ meanpressure  b =   -0.1674 | reverse b =   -0.5350 | product 0.0896 = r^2 = 0.0896
+Durbin-Watson: meantemp ~ meanpressure 0.28, meantemp ~ humidity 0.07, humidity ~ wind_speed 0.37, humidity ~ meanpressure 0.26, meantemp ~ wind_speed 0.16, wind_speed ~ meanpressure 1.09.
+  All DW values are far below 2: the residuals are strongly positively autocorrelated
+  (seasonal structure left in the residuals), so SE(b), t and p are optimistic. The
+  slopes and R^2 remain valid descriptions of the fitted relation.
+Out-of-sample check (train 2013-2016 -> test 2017, Jan-Apr):
+  meantemp ~ meanpressure    R^2 train 0.773 -> test  0.755 (RMSE test 3.134 vs full-data RMSE 3.472)
+  meantemp ~ humidity        R^2 train 0.325 -> test  0.122 (RMSE test 5.935 vs full-data RMSE 6.009)
+  humidity ~ wind_speed      R^2 train 0.162 -> test  0.099 (RMSE test 18.024 vs full-data RMSE 15.535)
+  humidity ~ meanpressure    R^2 train 0.107 -> test  0.133 (RMSE test 17.676 vs full-data RMSE 15.946)
+  meantemp ~ wind_speed      R^2 train 0.113 -> test -0.502 (RMSE test 7.760 vs full-data RMSE 6.966)
+  wind_speed ~ meanpressure  R^2 train 0.105 -> test -0.356 (RMSE test 4.109 vs full-data RMSE 3.951)
+  The test period covers only one season (winter to early summer), so its variance and
+  range are smaller than in the full data; a lower test R^2 is partly a consequence of
+  that narrower range, not only of a worse fit (compare the test RMSE, which is not
+  affected by the range of y).

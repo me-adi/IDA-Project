@@ -1,0 +1,30 @@
+Relation analysis summary (n = 1575 days)
+Strongest positive relation:
+  humidity vs meanpressure: r = 0.339 (95% CI 0.295 to 0.382), rho = 0.332 -> moderate positive. Days with higher humidity tend to have higher meanpressure.
+Strongest negative relation:
+  meantemp vs meanpressure: r = -0.881 (95% CI -0.891 to -0.869), rho = -0.881 -> very strong negative. Days with higher meantemp tend to have lower meanpressure.
+All six pairs, ranked by |r|:
+  1. meantemp vs meanpressure: r = -0.881, rho = -0.881, very strong negative (t = -73.81, p < 0.001)
+  2. meantemp vs humidity: r = -0.574, rho = -0.578, strong negative (t = -27.77, p < 0.001)
+  3. humidity vs wind_speed: r = -0.400, rho = -0.413, moderate negative (t = -17.31, p < 0.001)
+  4. humidity vs meanpressure: r =  0.339, rho =  0.332, moderate positive (t = 14.30, p < 0.001)
+  5. meantemp vs wind_speed: r =  0.313, rho =  0.340, moderate positive (t = 13.08, p < 0.001)
+  6. wind_speed vs meanpressure: r = -0.299, rho = -0.315, weak negative (t = -12.44, p < 0.001)
+Pearson vs Spearman (|rho - r| >= 0.10 suggests a non-linear monotonic relation
+or influential points, to be examined with non-linear models in section 5):
+  none: Pearson and Spearman agree for every pair (largest gap +0.027 for meantemp vs wind_speed).
+  Note: both coefficients only measure MONOTONIC association. A non-monotonic
+  pattern (e.g. U-shaped, with high values at both ends of x) is invisible to both,
+  so the scatterplot matrix and the non-linear fits in section 5 are still needed.
+Caution - autocorrelation: consecutive days are not independent (lag-1
+autocorrelation meantemp 0.97, humidity 0.88, wind_speed 0.50, meanpressure 0.97).
+With the effective sample size n_eff the p-values become:
+  meantemp vs meanpressure: n_eff =   41, p < 0.001
+  meantemp vs humidity: n_eff =  118, p < 0.001
+  humidity vs wind_speed: n_eff =  609, p < 0.001
+  humidity vs meanpressure: n_eff =  118, p < 0.001
+  meantemp vs wind_speed: n_eff =  543, p < 0.001
+  wind_speed vs meanpressure: n_eff =  542, p < 0.001
+Pairs still significant at 5% after this adjustment: meantemp vs meanpressure, meantemp vs humidity, humidity vs wind_speed, humidity vs meanpressure, meantemp vs wind_speed, wind_speed vs meanpressure.
+Much of the shared variation is seasonal (see monthly_profiles): correlation shows
+association through the common annual cycle, not that one variable causes the other.
