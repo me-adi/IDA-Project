@@ -5,7 +5,7 @@
 #  Course   : Introduction to Data Analytics (IDA)
 #  Members  : Aditya Palapati    S20230010176  (group leader)
 #             Meghana Kuruva     S20230010134
-#             Rohin Sai Bogadi   S20230010047
+#             Rohin Sai Bhogadi   S20230010047
 #             Srimeenakshi K S   S20262010002
 #  Date     : 2026-10-07
 #
